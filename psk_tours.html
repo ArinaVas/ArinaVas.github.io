@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru"> <!--язык страницы-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.ico" type="image/x-icon"> <!--иконка сайта в браузере-->
+    <title>Турфирма "София"</title> <!--заголовок страницы-->
+    <link rel="stylesheet" href="./css/reset.css"> <!--сброс настроек браузера-->
+    <link rel="stylesheet" href="./css/style.css"> <!--стили-->
+    <link rel="stylesheet" href="./css/tours.css"> <!--стили для страницы "Горящие туры"-->
+</head>
+<body>
+
+    <header class="header"> <!--шапка страницы-->
+
+        <div class="wrapper"> <!--контейнер-->
+
+            <div class="header_wrapper">
+                <div class="header_logo"> <!--логотип-->
+                    <a href="index.html" class="header_logo-link">
+                        <img src="./img/svg/logo+text.svg" alt="Турфирма София" class="header_logo_pic">
+                    </a>
+                </div>
+    
+                <nav class="header_nav"> <!--меню-->
+                    <ul class="header_list">
+                        <li class="header_item"> <!--отдельные пункты меню-->
+                            <a href="hot_tours.html" class="header_link">Горящие туры</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="psk_tours.html" class="header_link">Туры в Псковской области</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="about_us.html" class="header_link">О нас</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="tel:+78112622224" class="header_link">+7 (8112) 62-22-24</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="https://vk.com/sofiatourpskov" class="header_link">
+                                <img src="./img/svg/vk logo.svg" alt="VK" class="header_item">
+                            </a>
+                            <a href="https://t.me/tur_firma_sofia" class="header_link">
+                                <img src="./img/svg/tg logo.svg" alt="tg" class="header_item">
+                            </a>
+                            <a href="mailto:SOFIA-TOUR@INBOX.RU" class="header_link">
+                                <img src="./img/svg/mail logo.svg" alt="mail" class="header_item">
+                            </a>
+                        </li>
+                        <li class="header_item">
+                            <a href="./psk_tours eng.html" class="header_link">EN</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="psk_tours">
+        <section class="psktours">
+            <div class="bg">
+                <img src="./img/bg_header.jpg" height="160px" width="100%" alt="bg" class="bg">
+            </div>
+            <div class="countries">
+                <div class="pskov">
+                    <img src="./img/псковские туры/псков.jpg" height="310px" width="286px" style="border-radius: 20px;" alt="pskov">
+                    <div class="country_title">
+                        <h3>Псков</h3>
+                    </div>
+                    <div class="country_desc">
+                        <p>Приглашаем вас отправиться в удивительное путешествие в Псков, где вы сможете посетить Довмонтов город, Кремль, а также познакомиться с богатой историей этого удивительного города.</p>
+                    </div>
+                </div>
+                <div class="izborsk"> 
+                    <img src="./img/псковские туры/изборск.jpg" height="310px" width="286px" style="border-radius: 20px;" alt="izborsk">
+                    <div class="country_title">
+                        <h3>Изборск</h3>
+                    </div>
+                    <div class="country_desc">
+                        <p>Изборск позволит вам проникнуться атмосферой средневековья, узнать о легендах и историях, связанных с этим местом, и насладиться красотой природы вокруг.</p>
+                    </div>
+                </div>
+                <div class="pechory">
+                    <img src="./img/псковские туры/печоры.jpeg" height="310px" width="286px" style="border-radius: 20px;" alt="pechory">
+                    <div class="country_title">
+                        <h3>Печоры</h3>
+                    </div>
+                    <div class="country_desc">
+                        <p>Тур в Печоры позволит вам окунуться в удивительный мир природы, исследовать годы человеческой истории и получить незабываемые впечатления от посещения этого уникального места.</p>
+                    </div>
+                </div>
+                <div class="pushgory">
+                    <img src="./img/псковские туры/пушгоры.jpeg" height="310px" width="286px" style="border-radius: 20px;" alt="pushgory">
+                    <div class="country_title">
+                        <h3>Пушкинские горы</h3>
+                    </div>
+                    <div class="country_desc">
+                        <p>Поездка в Пушкинские горы позволит вам отдохнуть от городской суеты, насладиться красивыми видами природы, погулять по живописным тропам и провести время с пользой для души и тела.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info">
+                <p>Всю актуальную информацию о турах вы можете узнать в нашем сообществе ВКонтакте, по телефону или обратившись лично.</p>
+            </div>
+            <div class="app_button">
+                <button type="s" class="app_button_s"><a href="#1" class="b_link" id="open_pop_up">ОСТАВИТЬ ЗАЯВКУ</a></button> <!--кнопка-->
+            </div>
+            <form action="send.php" method="post">
+                <div class="pop_up" id="pop_up"> <!--форма для подачи заявки-->
+                    <div class="pop_up_container">
+                        <div class="pop_up_body" id="pop_up_body">
+                         <h1 class="popup_title">Оставить заявку</h1>
+                         <p class="zayavka">Оставьте заявку на сайте и мы перезвоним Вам в ближайшее время</p>
+                            <input class="in" type="text" name="name" required placeholder="Ваше имя *">
+                            <input class="in" type="tel" name="phone" require placeholder="Телефон *">
+                            <input class="in" type="text" name="appl" placeholder="Опишите Ваш запрос *">
+                            <input type="checkbox" required id="user_agree" name="user_agree"/>
+                            <p class="checkbox_label">Ознакомлен(а)<br>с 
+                            <a href="user_agree.html">пользовательским соглашением</a> *</p>
+                            <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ" style="font-weight: 700; color: white;" class="pop_up_button" id="pop_up_button">
+                            <div class="pop_up_close" id="pop_up_close">&#10006</div> <!--код значка крестик-->
+                        </div>
+                    </div>
+                </div>
+            </form>
+                <script src="popup.js"></script> <!--подключение скрипта для открытия/закрытия формы-->
+            </div>
+        </section>
+
+        <section class="contacts"> <!--контакты, 3 блок-->
+            <div class="wrapper">
+                <h2 class="contacts_title">Контакты</h2> <!--заголовок-->
+                <div class="map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acb578882d6198c2b53e4ec4048e3a9310dde250a75f2dfa825af126a18e0f63c&amp;source=constructor" 
+                    width="100%" height="400" frameborder="0"></iframe>
+                </div>
+                <div class="contact">
+                    <div class="address">
+                        <p><img src="./img/svg/home.svg" alt="house">
+                            г. Псков, Октябрьский пр-кт, 50, офис 409</p>
+                    </div>
+                    <div class="phone">
+                        <p><img src="./img/svg/phone.svg" alt="phone">
+                        <a href="tel:+78112622224" class="phone_link">+7 (8112) 62-22-24</a></p>
+                    </div>
+                    <div class="socials">
+                        <p><a href="https://vk.com/sofiatourpskov" class="socials">
+                        <img src="./img/svg/vk logo black.svg" alt="vk">https://vk.com/sofiatourpskov</a></p>
+                        <p><a href="https://t.me/tur_firma_sofia" class="socials">
+                        <img src="./img/svg/tg logo black.svg" alt="tg">https://t.me/tur_firma_sofia</a></p>
+                        <p><a href="mailto:SOFIA-TOUR@INBOX.RU" class="socials">
+                        <img src="./img/svg/mail logo black.svg" alt="mail">SOFIA-TOUR@INBOX.RU</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="footer"> <!--подвал страницы-->
+            <div class="wrapper">
+                <div class="copyright">
+                    Copyright © 2023 - 2024 Туристическая фирма «София»
+                </div>
+        </section>
+
+    </main>
+</body>
+</html>

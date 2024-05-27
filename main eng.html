@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="eng"> <!--язык страницы-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.ico" type="image/x-icon"> <!--иконка сайта в браузере-->
+    <title>Travel agency "Sophia"</title> <!--заголовок страницы-->
+    <link rel="stylesheet" href="./css/reset.css"> <!--сброс настроек браузера-->
+    <link rel="stylesheet" href="./css/style.css"> <!--собственные стили-->
+</head>
+<body>
+
+    <header class="header"> <!--шапка страницы-->
+        <div class="wrapper"> <!--контейнер-->
+            <div class="header_wrapper">
+                <div class="header_logo"> <!--логотип-->
+                    <a href="main eng.html" class="header_logo-link">
+                        <img src="./img/svg/logo eng.svg" alt="Travel agency Sophia" class="header_logo_pic">
+                    </a>
+                </div>
+    
+                <nav class="header_nav"> <!--меню-->
+                    <ul class="header_list">
+                        <li class="header_item"> <!--отдельные пункты меню-->
+                            <a href="hot_tours eng.html" class="header_link">Last-minute tours</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="psk_tours eng.html" class="header_link">Pskov region tours</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="./about_us eng.html" class="header_link">About us</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="tel:+78112622224" class="header_link">+7 (8112) 62-22-24</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="https://vk.com/sofiatourpskov" class="header_link">
+                                <img src="./img/svg/vk logo.svg" alt="VK" class="header_item">
+                            </a>
+                            <a href="https://t.me/tur_firma_sofia" class="header_link">
+                                <img src="./img/svg/tg logo.svg" alt="tg" class="header_item">
+                            </a>
+                            <a href="mailto:SOFIA-TOUR@INBOX.RU" class="header_link">
+                                <img src="./img/svg/mail logo.svg" alt="mail" class="header_item">
+                            </a>
+                        </li>
+                        <li class="header_item">
+                            <a href="./index.html" class="header_link">RU</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+    <section class="intro"> <!--первый экран главной страницы-->
+        <div class="wrapper">
+            <h1 class="intro_title">Author's tours and excursions since 2000</h1> <!--заголовок-->
+            <div class="intro_subtitle">We will open the whole of Russia for you through our author tours. 
+                Our clients live in different parts of the world. 
+                The main direction of our activity is the reception of both Russian and foreign tourists in Russia and the Pskov region.</div>
+            <div class="intro_button">
+                <button type="submit" class="intro_button_submit"><a href="#" class="b_link" id="open_pop_up">SUBMIT YOUR APPLICATION</a></button> <!--кнопка-->
+            </div>
+
+            <form action="send.php" method="post">
+                <div class="pop_up" id="pop_up"> <!--форма для подачи заявки-->
+                    <div class="pop_up_container">
+                        <div class="pop_up_body" id="pop_up_body">
+                         <h1 class="popup_title">Submit your application</h1>
+                         <p class="zayavka">We will call you back soon!</p>
+                            <input class="in" type="text" name="name" required placeholder="Your name *">
+                            <input class="in" type="tel" name="phone" require placeholder="Phone *">
+                            <input class="in" type="text" name="appl" placeholder="Describe your application *">
+                            <input type="checkbox" required id="user_agree" name="user_agree"/>
+                            <p class="checkbox_label">I have read<br>с 
+                            <a href="user_agree eng.html">the user agreement</a> *</p>
+                            <input type="submit" value="SEND" style="font-weight: 700; color: white;" class="pop_up_button" id="pop_up_button">
+                            <div class="pop_up_close" id="pop_up_close">&#10006</div> <!--код значка крестик-->
+                        </div>
+                    </div>
+                </div>
+            </form>
+                <script src="popup.js"></script> <!--подключение скрипта для открытия/закрытия формы-->
+            </div>
+        </section>
+
+    <section class="benefits"> <!--второй экран главной страницы-->
+        <div class="benefits_wrap">
+            <div class="columns"> <!--разделение на колонки-->
+                <div class="left"> <!--левая колонка-->
+                    <p class="benefits_title">WE HAVE STUDIED THE FEATURES OF TOURISM<br>IN RUSSIA AND THE<br>PSKOV REGION FOR<br>OVER 24 YEARS OF WORK</p>
+                    <div class="benefits_button">
+                        <button type="sub" class="benefits_button_sub"> <a href="./about_us eng.html" class="b_link">LEARN MORE</a></button> 
+                    </div>     
+                </div>
+                <div class="icons"> <!--центральная колонка с иконками-->
+                    <div style="padding-bottom: 40px;"><img src="./img/svg/person.svg" alt="person" class="right_icon_th"></div> 
+                    <img src="./img/svg/car.svg" alt="car" class="right_icon_th">
+                    <img src="./img/svg/award.svg" alt="award" class="right_icon_th">
+                </div>
+                <div class="right"> <!--правая колонка-->
+                    <h2 class="right_title">
+                        First, we discuss the client’s wishes and create a customised tour, rather than offering ready-made solutions
+                    </h2>
+                    <p class="right_descr">
+                        Each request leads to the selection of an offer. From budget vouchers to premium solutions for those who want to see more.
+                    </p>
+                    <h2 class="right_title">
+                        We know every corner of the Pskov region well
+                    </h2>
+                    <p class="right_descr">
+                        We will meet you immediately on the train and on the plane. The guide will accompany you either in your personal vehicle or we will provide a transport.
+                    </p>
+                    <h2 class="right_title">
+                        We have international experience
+                    </h2>
+                    <p class="right_descr">
+                        We organise a tour to any accessible point in the world. We have representatives in many friendly countries of the world.
+                    </p>
+                </div>
+            </div>        
+        </div>
+    </section>
+
+    <section class="tours"> <!--третий экран главной страницы-->
+        <div class="wrapper">
+            <h1 class="tours_title">LAST-MINUTE TOURS</h1> <!--заголовок-->
+            <div class="countries">
+                <div class="turkey">
+                    <img src="./img/горящие туры/турция.jpg" height="310px" width="286px" style="border-radius: 20px;" alt="turkey" class="country_pic">
+                    <div class="country_title">
+                        <h3>Turkey</h3>
+                    </div>
+                    <div class="country_desc">
+                        <p>Embark on an amazing journey to Turkey and experience the magic of the East. Ancient monuments and modern cities, warm sea and mountain peaks are waiting for you.</p>
+                    </div>
+                </div>
+                <div class="egypt"> 
+                    <img src="./img/горящие туры/египет.jpg" height="310px" width="286px" style="border-radius: 20px;" alt="egypt" class="country_pic">
+                    <div class="country_title">
+                        <h3>Egypt</h3>
+                    </div>
+                    <div class="country_desc">
+                        <p>We invite you to the wonderful world of Egypt, where ancient ruins and modern comfort are combined. Relax on golden beaches and explore ancient temples.</p>
+                    </div>
+                </div>
+                <div class="uae">
+                    <img src="./img/горящие туры/оаэ.jpg" height="310px" width="286px" style="border-radius: 20px;" alt="uae" class="country_pic">
+                    <div class="country_title">
+                        <h3>UAE</h3>
+                    </div>
+                    <div class="country_desc">
+                        <p>Immerse yourself in the world of luxury and exquisite holidays in the UAE! Enjoy crystal clear beaches, luxury hotels, exciting shopping tours and exciting excursions in the middle of the modern metropolis of Dubai.</p>
+                    </div>
+                </div>
+                <div class="dagestan">
+                    <img src="./img/горящие туры/дагестан.jpg" height="310px" width="286px" style="border-radius: 20px;" alt="dagestan" class="country_pic">
+                    <div class="country_title">
+                        <h3>Dagestan</h3>
+                    </div>
+                    <div class="country_desc">
+                        <p>We invite you to an exciting adventure in Dagestan, a mountainous region with stunning landscapes, diverse cultural traditions and hospitable locals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tours_button">
+                <button type="s" class="tours_button_s"><a href="./hot_tours eng.html" class="b_link">VIEW ALL OPTIONS FOR PLACES</a></button> <!--кнопка-->
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts"> <!--четвертый экран главной страницы-->
+        <div class="wrapper">
+            <h2 class="contacts_title">Contacts</h2> <!--заголовок-->
+            <div class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aea79b5c8c7c64f26c303ee45e640d617ae8f045f675b588c668ef80d168d4e59&amp;source=constructor" 
+                width="100%" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="contact">
+                <div class="address">
+                    <p><img src="./img/svg/home.svg" alt="house">
+                        Pskov, Oktyabrsky Prospekt, 50 office 409</p>
+                </div>
+                <div class="phone">
+                    <p><img src="./img/svg/phone.svg" alt="phone">
+                    <a href="tel:+78112622224" class="phone_link">+7 (8112) 62-22-24</a></p>
+                </div>
+                <div class="socials">
+                        <p><a href="https://vk.com/sofiatourpskov" class="socials">
+                        <img src="./img/svg/vk logo black.svg" alt="vk">https://vk.com/sofiatourpskov</a></p>
+                        <p><a href="https://t.me/tur_firma_sofia" class="socials">
+                        <img src="./img/svg/tg logo black.svg" alt="tg">https://t.me/tur_firma_sofia</a></p>
+                        <p><a href="mailto:SOFIA-TOUR@INBOX.RU" class="socials">
+                        <img src="./img/svg/mail logo black.svg" alt="mail">SOFIA-TOUR@INBOX.RU</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer"> <!--подвал страницы-->
+        <div class="wrapper">
+            <div class="copyright">
+                Copyright © 2023 - 2024 Tourist agency «Sophia»
+            </div>
+    </section>
+
+</main>
+
+</body>
+</html>

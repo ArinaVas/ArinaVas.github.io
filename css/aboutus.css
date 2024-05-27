@@ -1,0 +1,241 @@
+
+/*1 БЛОК СТРАНИЦЫ О НАС*/
+.aboutus
+{
+    background-color: #F3E3FF;
+    padding-bottom: 50px;
+}
+.pskov /*колонки для первой части*/
+{
+    display: grid;
+    grid-template-columns: 500px 580px; /*размеры колонок*/
+    grid-column-gap: 120px; /*расстояние между колонками*/
+    margin-top: 40px; /*расстояние от шапки*/
+    margin-left: 170px; /*расстояние слева*/
+}
+.description1 /*первая текстовка*/
+{
+    max-width: 1200px;
+    margin-left: 170px;
+    margin-top: 40px;
+}
+.events
+{
+    display: grid;
+    grid-template-columns: 300px 300px 300px; /*размеры колонок*/
+    grid-column-gap: 148px; /*расстояние между колонками*/
+    margin-top: 20px; /*расстояние от текста*/
+    margin-left: 170px; /*расстояние слева*/
+}
+.event_title /*заголовки мероприятий*/
+{
+    margin-top: 8px;
+    text-align: center;
+    font-weight: 700;
+    color: #8D3E9A;
+    margin-bottom: 20px;
+}
+.description2 /*вторая текстовка*/
+{
+    max-width: 1200px;
+    margin-left: 170px;
+}
+
+/*2 БЛОК СТРАНИЦЫ О НАС*/
+
+.astour /*блок "Астур"*/
+{
+    background-color: white;
+    padding-bottom: 30px;
+}
+.astour_t /*заголовок "Астур"*/
+{
+    font-size: 32px;
+    font-weight: 700;
+    color: #8D3E9A;
+    margin-bottom: 40px;
+}
+.text_ph /*текст и фото 2 блока*/
+{
+    display: grid;
+    grid-template-columns: 840px 260px; /*размеры колонок*/
+    grid-column-gap: 94px; /*расстояние между колонками*/
+    margin-top: 30px; /*расстояние от края блока*/
+    margin-left: 170px; /*расстояние слева*/
+}
+.t_title /*заголовки в тексте*/
+{
+    font-size: 20px;
+    font-weight: 700;
+    color: #8D3E9A;
+}
+.ph {margin-top: 60px;} /* отступ сверху для колонки с фото*/
+.photo {margin-bottom: 20px;} /*отступ между фото*/
+
+@media (max-width: 440px) /*РАЗРЕШЕНИЕ НЕ БОЛЕЕ 425px*/
+{
+    .bg
+    {
+        height: 240px;
+    }
+    .phpsk
+    {
+        height: 200px;
+        width: 300px; 
+    }
+    /*1 БЛОК СТРАНИЦЫ О НАС*/
+    .aboutus
+    {
+        background-color: #F3E3FF;
+        padding-bottom: 50px;
+    }
+    .pskov /*колонки для первой части*/
+    {
+        display: grid;
+        grid-template-columns: 85%; /*размеры колонок*/
+        margin-top: 40px; /*расстояние от шапки*/
+        margin-left: 20px; /*расстояние слева*/
+    }
+    .description1 /*первая текстовка*/
+    {
+        max-width: 85%;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .events
+    {
+        display: grid;
+        grid-template-columns: 85%; /*размеры колонок*/
+        margin-top: 20px; /*расстояние от текста*/
+        margin-left: 20px; /*расстояние слева*/
+    }
+    .event_title /*заголовки мероприятий*/
+    {
+        margin-top: 8px;
+        text-align: center;
+        font-weight: 700;
+        color: #8D3E9A;
+        margin-bottom: 20px;
+    }
+    .description2 /*вторая текстовка*/
+    {
+        max-width: 85%;
+        margin-left: 20px;
+    }
+
+    /*2 БЛОК СТРАНИЦЫ О НАС*/
+
+    .astour /*блок "Астур"*/
+    {
+        background-color: white;
+        padding-bottom: 30px;
+    }
+    .astour_t /*заголовок "Астур"*/
+    {
+        font-size: 32px;
+        font-weight: 700;
+        color: #8D3E9A;
+        margin-bottom: 40px;
+    }
+    .text_ph /*текст и фото 2 блока*/
+    {
+        display: grid;
+        grid-template-columns: 85%; /*размеры колонок*/
+        margin-top: 30px; /*расстояние от края блока*/
+        margin-left: 20px; /*расстояние слева*/
+    }
+    .t_title /*заголовки в тексте*/
+    {
+        font-size: 20px;
+        font-weight: 700;
+        color: #8D3E9A;
+    }
+    .ph {margin-top: 60px;} /* отступ сверху для колонки с фото*/
+    .photo {margin-bottom: 20px;} /*отступ между фото*/
+}
+
+@media (min-width: 441px) and (max-width: 1440px) /*РАЗРЕШЕНИЕ ОТ 441 ДО 1440px*/
+{
+    /*1 БЛОК СТРАНИЦЫ О НАС*/
+    .aboutus
+    {
+        background-color: #F3E3FF;
+        padding-bottom: 50px;
+    }
+    .pskov /*колонки для первой части*/
+    {
+        display: grid;
+        grid-template-columns: 85%; /*размеры колонок*/
+        margin-top: 40px; /*расстояние от шапки*/
+        margin-left: 8%; /*расстояние слева*/
+    }
+    .phpsk
+    {
+        margin-bottom: 20px;
+    }
+    .description1 /*первая текстовка*/
+    {
+        max-width: 85%;
+        margin-left: 8%;
+        margin-top: 40px;
+    }
+    .ev_ph
+    {
+        height: 220px;
+        width: 220px;
+    }
+    .events
+    {
+        display: grid;
+        grid-template-columns: 220px 220px 220px; /*размеры колонок*/
+        grid-column-gap: 10px; /*расстояние между колонками*/
+        margin-top: 20px; /*расстояние от текста*/
+        margin-left: 8%; /*расстояние слева*/
+    }
+    .event_title /*заголовки мероприятий*/
+    {
+        margin-top: 8px;
+        text-align: center;
+        font-weight: 700;
+        color: #8D3E9A;
+        margin-bottom: 20px;
+    }
+    .description2 /*вторая текстовка*/
+    {
+        max-width: 85%;
+        margin-left: 8%;
+    }
+
+    /*2 БЛОК СТРАНИЦЫ О НАС*/
+    .astour /*блок "Астур"*/
+    {
+        background-color: white;
+        padding-bottom: 30px;
+    }
+    .astour_t /*заголовок "Астур"*/
+    {
+        font-size: 32px;
+        font-weight: 700;
+        color: #8D3E9A;
+        margin-bottom: 40px;
+    }
+    .text_ph /*текст и фото 2 блока*/
+    {
+        display: grid;
+        grid-template-columns: 85%; /*размеры колонок*/
+        margin-top: 30px; /*расстояние от края блока*/
+        margin-left: 8%; /*расстояние слева*/
+    }
+    .t_title /*заголовки в тексте*/
+    {
+        font-size: 20px;
+        font-weight: 700;
+        color: #8D3E9A;
+    }
+    .ph {margin-top: 80px;} /* отступ сверху для колонки с фото*/
+    .photo
+    {
+        height: 90%;
+        width: 30%;
+    }
+}

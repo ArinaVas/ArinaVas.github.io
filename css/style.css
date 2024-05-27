@@ -1,0 +1,900 @@
+/*подключение шрифтов*/
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/fira-sans-v17-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/fira-sans-v17-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/fira-sans-v17-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+ 
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/fira-sans-v17-cyrillic_latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+ 
+/*общие настройки*/
+html 
+{
+  box-sizing: border-box;
+}
+*, *::before, *::after
+{
+  box-sizing: inherit;
+}
+body /*базовый шрифт*/
+{
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 100;
+  color: black;
+}
+
+/*контейнер для контента на странице*/
+.wrapper
+{
+  max-width: 1420px;
+  margin: 0 auto;
+}
+/*стиль шапки*/
+.header
+{
+  background: linear-gradient(#896D9F, rgba(232,201,255,0));
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header_wrapper /*контейнер для шапки*/
+{
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.header_list /*меню*/
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.header_item 
+{
+  margin-right: 60px; /*отступ между пунктами меню*/
+}
+.header_item:last-child {margin-right: 0;}
+
+.header_link /*стиль ссылок*/
+{
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+.header_link:hover, .header_link:focus, .header_link:active /*действия в меню*/
+{
+  color: #8D3E9A;
+}
+
+/*ПЕРВЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+.intro
+{
+  min-height: 800px;
+  background: url(https://35photo.pro/photos_series/1177/1177037.jpg) no-repeat center;
+  background-size: cover;
+}
+.intro_title /*заголовок*/
+{
+  font-size: 1.25em; /*20px*/
+  line-height: 1;
+  font-weight: 700;
+  color: white;
+  padding-left: 59%;
+  padding-top: 190px;
+  margin-bottom: 20px;
+}
+.intro_subtitle /*подзаголовок*/
+{
+  font-weight: 500;
+  color: white;
+  padding-left: 59%;
+  max-width: 92%;
+  margin-bottom: 40px;
+}
+.intro_button_submit /*кнопка*/
+{
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  background: #8D3E9A;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 59%;
+}
+.b_link
+{
+  color: white;
+  font-size: 1.25em;
+  font-weight: 700;
+  text-decoration: none;
+}
+/*ВТОРОЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+.benefits_wrap 
+{
+  background-color: #F3E3FF; /*фон*/
+}
+.columns /*колонки*/
+{
+  display: grid;
+  grid-template-columns: 49% 2.8% 35%; /*размеры колонок*/
+  grid-column-gap: 5.6%; /*расстояние между колонками*/
+}
+.left
+{padding-top: 130px; /*отступ сверху блока для левой колонки*/}
+.benefits_title /*заголовок в левой колонке*/
+{
+  font-size: 2.5em; /*40px*/
+  font-weight: 700;
+  margin-left: 28%;
+  padding-bottom: 30px;
+}
+.benefits_button_sub /*кнопка в левой колонке*/
+{
+  padding: 12px 28px;
+  border-radius: 20px;
+  border: none;
+  background: #8D3E9A;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 28%;
+}
+.icons 
+{padding-top: 60px; /*отступ сверху блока для иконок*/}
+.right_icon_th
+{margin-bottom: 40px; /*отступ между иконками*/}
+.right 
+{
+  padding-top: 60px; /*отступ сверху блока для правой колонки*/
+  margin-right: 8%; /*отступ справа*/
+}
+.right_title /*заголовки в правой колонке*/
+{
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 700;
+  color: #8D3E9A;
+  margin-bottom: 14px;
+}
+.right_descr 
+{padding-bottom: 40px; /*отступ между текстовыми блоками в правой колонке*/}
+
+/*ТРЕТИЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+.tours
+{
+  background-color: white;
+}
+.tours_title
+{
+  padding-top: 32px;
+  text-align: center;
+  font-size: 3em; /*48px*/
+  line-height: 1;
+  font-weight: 900;
+  color: #8D3E9A;
+  margin-bottom: 37px;
+}
+.countries /*колонки*/
+{
+  display: grid;
+  grid-template-columns: repeat(4, 286px); /*размеры колонок*/
+  grid-column-gap: 92px; /*расстояние между колонками*/
+}
+.country_title
+{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1;
+  font-weight: 700;
+  color: #8D3E9A;
+  margin-bottom: 8px;
+}
+.country_desc
+{
+  max-width: 100%;
+  padding-bottom: 40px;
+}
+.tours_button_s
+{
+  padding: 12px 28px;
+  border-radius: 20px;
+  border: none;
+  background: #8D3E9A;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+/*ЧЕТВЕРТЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+.contacts
+{background-color: #F3E3FF;}
+.contacts_title
+{
+    padding-top: 60px;
+    text-align: center;
+    font-size: 2.25em; /*36px*/
+    line-height: 1;
+    font-weight: 700;
+    color: #8D3E9A;
+    margin-bottom: 30px;
+}
+.map
+{margin-bottom: 30px;}
+.contact
+{
+  display: grid;
+  grid-template-columns: 36% 13.2% 28.1%; /*размеры колонок*/
+  grid-column-gap: 8%; /*расстояние между колонками*/
+  font-weight: 500;
+  font-size: 1.25em;
+}
+.address
+{margin-left: 8%;}
+.phone_link
+{
+  font-size: 1em;
+  line-height: 1;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+.socials
+{
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  margin-left: 20%;
+  margin-bottom: 30px;
+}
+.footer
+{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #8D3E9A;
+  color: white;
+}
+.copyright
+{margin-left: 4%;}
+
+
+/*ФОРМА ОСТАВИТЬ ЗАЯВКУ*/
+.pop_up /*затемнение фона*/
+{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.pop_up_container /*контейнер для формы*/
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.pop_up_body /*форма*/
+{
+  margin: auto;
+  width: 410px;
+  height: 580px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 60px 36px 40px 36px;
+  position: relative;
+}
+.popup_title /*заголовок формы*/
+{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #8D3E9A;
+  margin-bottom: 20px;
+}
+.zayavka /*текст формы*/
+{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.in /*ввод*/
+{
+  padding-left: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #9D9D9D;
+  height: 48px;
+  width: 320px;
+  border-radius: 20px;
+}
+input[type=checkbox] 
+{
+  transform: scale(1.5); /*увеличение размера чекбокс*/
+  margin-left: 30px; /*отступ слева*/
+}
+.pop_up_button /*кнопка на форме*/
+{
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  background: #8D3E9A;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 34px;
+}
+.checkbox_label /*текст около чекбокса*/
+{
+  margin-top: -20px;
+  margin-left: 50px;
+  text-align: left;
+  font-size: 14px;
+}
+.pop_up_close /*закрытие формы*/
+{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.pop_up.active{display: block;} 
+
+@media (max-width: 440px) /*РАЗРЕШЕНИЕ НЕ БОЛЕЕ 425px*/
+{
+.header_logo_pic /*размер логотипа*/
+{
+  max-width: 100%;
+}
+  /*стиль шапки*/
+.header
+{
+  background: linear-gradient(#896D9F, rgba(232,201,255,0));
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /*изменено*/
+}
+.header_wrapper /*контейнер для шапки*/
+{
+  padding-top: 30px;
+  padding-left: 20px; /*изменено*/
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 66%; /*изменено*/
+}
+.header_list /*меню*/
+{
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header_item 
+{
+  margin-right: 20%; /*отступ между пунктами меню*/ /*изменено*/
+}
+.header_item:last-child {margin-right: 0;}
+
+.header_link /*стиль ссылок*/
+{
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+.header_link:hover, .header_link:focus, .header_link:active /*действия в меню*/
+{
+  color: #8D3E9A;
+}
+
+/*ПЕРВЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+.intro
+{
+  min-height: 650px;
+  background: url(https://35photo.pro/photos_series/1177/1177037.jpg) no-repeat center;
+  background-size: cover;
+}
+.intro_title /*заголовок*/
+{
+  font-size: 1.25em; /*20px*/
+  font-weight: 700;
+  color: white;
+  padding-left: 5%; /*изменено*/
+  padding-top: 280px; /*изменено*/
+  margin-bottom: 20px;
+  max-width: 75%; /*изменено*/
+}
+.intro_subtitle /*подзаголовок*/
+{
+  font-weight: 500;
+  color: white;
+  padding-left: 5%; /*изменено*/
+  max-width: 75%; /*изменено*/
+  margin-bottom: 40px;
+}
+.intro_button_submit /*кнопка*/
+{
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  background: #8D3E9A;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%; /*изменено*/
+}
+.b_link
+{
+  color: white;
+  font-size: 1.25em;
+  font-weight: 700;
+  text-decoration: none;
+}
+/*ВТОРОЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+.benefits_wrap 
+{
+  background-color: #F3E3FF; /*фон*/
+}
+.columns /*строки*/
+{
+  display: grid;
+  grid-template-columns: 100%; /*одна колонка*/ /*изменено*/
+  grid-template-rows: 30% 100%; /*размеры строк*/ /*изменено*/
+  grid-row-gap: 2%; /*расстояние между строками*/ /*изменено*/
+}
+.left
+{padding-top: 40px; /*отступ сверху блока для левой колонки*/}
+.benefits_title /*заголовок в левой колонке*/
+{
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-left: 5%;
+  padding-bottom: 20px;
+  max-width: 80%;
+}
+.benefits_button_sub /*кнопка в левой колонке*/
+{
+  padding: 12px 28px;
+  border-radius: 20px;
+  border: none;
+  background: #8D3E9A;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+}
+.icons 
+{display: none;}
+.right 
+{
+  padding-top: 10px; /*отступ сверху блока для правой колонки*/
+  margin-left: 5%; /*отступ справа*/
+}
+.right_title /*заголовки в правой колонке*/
+{
+  font-size: 1.25em;
+  line-height: 1;
+  font-weight: 700;
+  color: #8D3E9A;
+  margin-bottom: 14px;
+  max-width: 90%;
+}
+.right_descr 
+{padding-bottom: 40px; /*отступ между текстовыми блоками в правой колонке*/}
+.right_descr:last-child {margin-bottom: 40px;}
+
+/*ТРЕТИЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+.tours
+{
+  background-color: white;
+}
+.tours_title
+{
+  padding-top: 32px;
+  text-align: left;
+  margin-left: 5%;
+  font-size: 2em;
+  line-height: 1;
+  font-weight: 900;
+  color: #8D3E9A;
+  margin-bottom: 37px;
+}
+.countries /*колонки*/
+{
+  display: grid;
+  grid-template-columns: 85%; 
+  grid-template-rows: repeat(100%,4);
+}
+.country_title
+{
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 5%;
+  font-size: 1.25em;
+  line-height: 1;
+  font-weight: 700;
+  color: #8D3E9A;
+  margin-bottom: 8px;
+}
+.country_pic
+{
+  margin-left: 5%;
+}
+.country_desc
+{
+  max-width: 100%;
+  padding-bottom: 40px;
+  margin-left: 5%;
+}
+.tours_button_s
+{
+  padding: 12px 28px;
+  border-radius: 20px;
+  border: none;
+  background: #8D3E9A;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+/*ЧЕТВЕРТЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+.contacts
+{background-color: #F3E3FF;}
+.contacts_title
+{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 2.25em; /*36px*/
+    line-height: 1;
+    font-weight: 700;
+    color: #8D3E9A;
+    margin-bottom: 30px;
+}
+.map
+{margin-bottom: 30px;}
+.contact
+{
+  display: grid;
+  grid-template-columns: 75%; /*размеры колонок*/
+  grid-template-rows: repeat(100%,5);
+  grid-row-gap: 8%; /*расстояние между колонками*/
+  font-weight: 500;
+  font-size: 16px;
+}
+.address
+{
+  margin-left: 5%;
+}
+.phone
+{
+  margin-left: 5%;
+}
+.phone_link
+{
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+}
+.socials
+{
+  line-height: 1;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-bottom: 50px;
+}
+.footer
+{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #8D3E9A;
+  color: white;
+}
+.copyright
+{margin-left: 4%;}
+.pop_up_body /*форма*/
+{
+  width: 375px;
+  height: 550px;
+}
+}
+
+@media (min-width: 441px) and (max-width: 1440px) /*РАЗРЕШЕНИЕ ОТ 441 ДО 1440px*/
+{
+  .header_logo_pic /*размер логотипа*/
+  {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+  /*стиль шапки*/
+  .header
+  {
+    background: linear-gradient(#896D9F, rgba(232,201,255,0));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .header_wrapper /*контейнер для шапки*/
+  {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 20px;
+  }
+  .header_list /*меню*/
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header_item 
+  {
+    margin-right: 30px; /*отступ между пунктами меню*/
+  }
+  .header_item:last-child {margin-right: 0;}
+
+  .header_link /*стиль ссылок*/
+  {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+  }
+  .header_link:hover, .header_link:focus, .header_link:active /*действия в меню*/
+  {
+    color: #8D3E9A;
+  }
+
+  /*ПЕРВЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+  .intro
+  {
+    min-height: 800px;
+    background: url(https://35photo.pro/photos_series/1177/1177037.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .intro_title /*заголовок*/
+  {
+    font-size: 1.25em; /*20px*/
+    line-height: 1;
+    font-weight: 700;
+    color: white;
+    padding-left: 59%;
+    padding-top: 220px;
+    margin-bottom: 20px;
+  }
+  .intro_subtitle /*подзаголовок*/
+  {
+    font-weight: 500;
+    color: white;
+    padding-left: 59%;
+    max-width: 92%;
+    margin-bottom: 40px;
+  }
+  .intro_button_submit /*кнопка*/
+  {
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: none;
+    background: #8D3E9A;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 59%;
+  }
+  .b_link
+  {
+    color: white;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  /*ВТОРОЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+  .benefits_wrap 
+  {
+    background-color: #F3E3FF; /*фон*/
+  }
+  .columns /*колонки*/
+  {
+    display: grid;
+    grid-template-columns: 50% 45%; /*размеры колонок*/
+    grid-column-gap: 5.6%; /*расстояние между колонками*/
+  }
+  .left
+  {padding-top: 130px; /*отступ сверху блока для левой колонки*/}
+  .benefits_title /*заголовок в левой колонке*/
+  {
+    font-size: 2.5em; /*40px*/
+    font-weight: 700;
+    margin-left: 10%;
+    padding-bottom: 30px;
+  }
+  .benefits_button_sub /*кнопка в левой колонке*/
+  {
+    padding: 12px 28px;
+    border-radius: 20px;
+    border: none;
+    background: #8D3E9A;
+    color: white;
+    font-size: 1.25em;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10%;
+  }
+  .icons 
+  {display: none}
+  .right 
+  {
+    padding-top: 60px; /*отступ сверху блока для правой колонки*/
+    margin-right: 8%; /*отступ справа*/
+  }
+  .right_title /*заголовки в правой колонке*/
+  {
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: 700;
+    color: #8D3E9A;
+    margin-bottom: 14px;
+  }
+  .right_descr 
+  {padding-bottom: 40px; /*отступ между текстовыми блоками в правой колонке*/}
+
+  /*ТРЕТИЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+  .tours
+  {
+    background-color: white;
+  }
+  .tours_title
+  {
+    padding-top: 32px;
+    text-align: center;
+    font-size: 3em; /*48px*/
+    line-height: 1;
+    font-weight: 900;
+    color: #8D3E9A;
+    margin-bottom: 37px;
+  }
+  .countries /*колонки*/
+  {
+    display: grid;
+    grid-template-columns: repeat(2, 286px); /*размеры колонок*/
+    grid-column-gap: 92px; /*расстояние между колонками*/
+    justify-content: center;
+  }
+  .country_title
+  {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 1;
+    font-weight: 700;
+    color: #8D3E9A;
+    margin-bottom: 8px;
+  }
+  .country_desc
+  {
+    max-width: 100%;
+    padding-bottom: 40px;
+  }
+  .tours_button_s
+  {
+    padding: 12px 28px;
+    border-radius: 20px;
+    border: none;
+    background: #8D3E9A;
+    color: white;
+    font-size: 1.25em;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+
+  /*ЧЕТВЕРТЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ*/
+  .contacts
+  {background-color: #F3E3FF;}
+  .contacts_title
+  {
+      padding-top: 60px;
+      text-align: center;
+      font-size: 2.25em; /*36px*/
+      line-height: 1;
+      font-weight: 700;
+      color: #8D3E9A;
+      margin-bottom: 30px;
+  }
+  .map
+  {margin-bottom: 30px;}
+  .contact
+  {
+    display: grid;
+    grid-template-columns: 85%; /*размеры колонок*/
+    font-weight: 500;
+    font-size: 1.25em;
+  }
+  .address
+  {
+    font-size: 16px;
+    margin-left: 8%;
+  }
+  .phone
+  {
+    margin-left: 8%;
+  }
+  .phone_link
+  {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+  }
+  .socials
+  {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 4%;
+  }
+  .footer
+  {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #8D3E9A;
+    color: white;
+  }
+  .copyright
+  {margin-left: 4%;}
+}

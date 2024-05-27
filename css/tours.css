@@ -1,0 +1,41 @@
+/*СТРАНИЦЫ С ТУРАМИ*/
+.tours /*блок с турами*/
+{
+    background-color: white;
+    padding-bottom: 60px;
+}
+.countries /*места*/
+{
+    margin-top: 40px;
+    margin-left: 50px;
+
+}
+.info /*текст после мест*/
+{
+    font-size: 20px;
+    margin-left: 50px; 
+    margin-bottom: 40px;
+}
+.app_button_s /*кнопка для формы*/
+{
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: none;
+    background: #8D3E9A;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 440px) /*РАЗРЕШЕНИЕ НЕ БОЛЕЕ 425px*/
+{
+    .info
+    {
+        max-width: 77%;
+    }
+    .bg
+    {
+        height: 240px; 
+    }
+}
